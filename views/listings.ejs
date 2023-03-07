@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>My Listings</title>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
+  <link rel="stylesheet" href="/vendor/border-box.css" />
+  <link rel="stylesheet" href="/styles/layout.css" />
+
+  <script src="/vendor/jquery-3.0.0.js"></script>
+  <script defer src="/scripts/app.js"></script>
+</head>
+
+<body>
+  <%- include('partials/_header') %>
+    <h1 class="currentpage"> / my listings</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Size</th>
+          <th>Gender</th>
+          <th>Condition</th>
+          <!-- <th>Listing Date</th> -->
+          <th>Mark as sold</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (listing of listings) {%>
+          <tr>
+            <td><img src="<%= listing.photo_url %>" /></td>
+            <td>
+              <%= listing.name %>
+            </td>
+            <td>
+              <%= listing.description %>
+            </td>
+            <td>
+              <%= listing.price %>
+            </td>
+            <td>
+              <%= listing.size %>
+            </td>
+            <td>
+              <%= listing.gender %>
+            </td>
+            <td>
+              <%= listing.condition %>
+            </td>
+            <!-- <td>
+              <%= listing.listing_date %>
+            </td> -->
+            <td>
+              <form method="POST" action="/listings/sold/<%= listing.id %>">
+                <button type="submit" class="btn btn-primary">Sold</button><br>
+              </form>
+            </td>
+
+            <td>
+              <form method="POST" action="/listings/<%= listing.id %>">
+                <button type="submit" class="btn btn-primary">YEET</button><br>
+              </form>
+            </td>
+          </tr>
+          <%}%>
+      </tbody>
+    </table>
+    <%- include('partials/_footer') %>
+</body>
+</html>
