@@ -7,21 +7,21 @@ To do:
 - Add shopping cart functionality
 - Use grid layout to display each listing
 
-Thanks to Michael Green and Jimmy Zhang for their collaboration on this project.
+Thanks to [Michael Green](https://github.com/JackDuluoz) and [Jimmy Zhang](https://github.com/jimmyzhng) for their collaboration on this project.
 
 # Screenshots
 
 ### Landing Page
 
-![Landing Page](../group3midterm/public/screenshots/LandingPage.png)
+![Landing Page](./public/screenshots/LandingPage.png)
 
 ### Create New Listing
 
-![Create New Listing](../group3midterm/public/screenshots/NewListing.png)
+![Create New Listing](./public/screenshots/NewListing.png)
 
 ### My listings
 
-![My listings](../group3midterm/public/screenshots/MyListings.png)
+![My listings](./public/screenshots/MyListings.png)
 
 # Setup
 
@@ -33,7 +33,7 @@ Thanks to Michael Green and Jimmy Zhang for their collaboration on this project.
 4. Fix to binaries for sass run `npm rebuild node-sass`
 4. Run the server `npm run local`
   - Note: nodemon is used, so you should not have to restart your server
-5. Visit `http://localhost:8080/`
+5. Visit http://localhost:8080/
 6. Register and Login to access full functionality
 
 ### Database
